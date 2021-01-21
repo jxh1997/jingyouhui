@@ -16,7 +16,7 @@
 
     <!-- 公告展示 -->
     <view class="like-container">
-        <image class="headline" src="/images/my/Notice.jpg" mode="heightFix" />
+        <image class="headline" src="/images/my/Notice.png" mode="heightFix" />
         <view class="preview-container">
             <block wx:for="{{classics}}" wx:key="index">
                 <preview-cmp bind:tapping="onJumpToDetail" class="preview" classic="{{item}}" />

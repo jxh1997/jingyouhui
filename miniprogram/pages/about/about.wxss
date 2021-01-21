@@ -11,7 +11,7 @@ page{
   left: 0;
 }
 .about-content{
-  background-color: red;
+  /* background-color: red; */
   width: 200rpx;
   height: 200rpx;
   border-radius: 50%;
