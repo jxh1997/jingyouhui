@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "preview-cmp": "/components/preview/index"
+  }
+}

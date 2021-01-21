@@ -1,0 +1,8 @@
+<!--miniprogram/pages/about/about.wxml-->
+<image class="about-img" src="../../images/my/about@bg.png" mode="scaleToFill" />
+<!-- 打赏按钮 -->
+<view class="about-content" bind:tap="showPopup" >
+</view>
+<van-popup show="{{ show }}" bind:tap="onClose" custom-style="width: 80%;">
+  <image class="zanshang-img" src="{{url}}" data-src="{{url}}" mode="widthFix"  bindtap="previewImage"></image>
+</van-popup>

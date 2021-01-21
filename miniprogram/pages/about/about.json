@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-popup": "../../components/dist/popup/index"
+  },
+  "navigationBarTitleText": "联系我们"
+}

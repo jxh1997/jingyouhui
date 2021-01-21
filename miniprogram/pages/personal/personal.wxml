@@ -1,0 +1,27 @@
+<view class="container">
+    <image src="/images/my/my@bg.png" class="bg"></image>
+    <open-data type="userAvatarUrl" class="avatar avatar-position"/>
+    <open-data type="userNickName" class="avatar-container avatar-position"/>
+    
+    <view class="about-container">
+        <view bind:tap="onJumpToAbout" class="about-us">
+            <image src="/images/my/about.png" />
+            <text class="description">联系我们</text>
+        </view>
+        <view class="about-us">
+            <image src="/images/my/alert.png" />
+            <text class="description">设置提醒</text>
+        </view>
+    </view>
+
+    <!-- 公告展示 -->
+    <view class="like-container">
+        <image class="headline" src="/images/my/Notice.jpg" mode="heightFix" />
+        <view class="preview-container">
+            <block wx:for="{{classics}}" wx:key="index">
+                <preview-cmp bind:tapping="onJumpToDetail" class="preview" classic="{{item}}" />
+            </block>
+        </view>
+    </view>
+
+</view>
