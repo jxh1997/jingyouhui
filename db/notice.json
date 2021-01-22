@@ -13,7 +13,7 @@
     "image": "http://bl.talelin.com/images/movie.8.png",
     "index": 8,
     "like_status": 0,
-    "pubdate": "2018-06-22",
+    "pubdate": "2021-01-22",
     "title": "李安《饮食男女 》",
     "type": 100
   }
@@ -28,9 +28,8 @@
     "image": "http://bl.talelin.com/images/music.5.png",
     "index": 5,
     "like_status": 1,
-    "pubdate": "2018-06-22",
+    "pubdate": "2021-01-21",
     "title": "好妹妹 《一个人的北京》",
-    "type": 200,
-    "url": "http://music.163.com/song/media/outer/url?id=26427662.mp3"
+    "type": 200
   }
 }

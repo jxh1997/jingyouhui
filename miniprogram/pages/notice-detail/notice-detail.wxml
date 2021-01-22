@@ -1,3 +1,30 @@
-<view>
-{{cid}} {{type}}
+<!--pages/classic/classic.wxml-->
+<view class="container">
+  <view class="header">
+    <!-- 日期格式 -->
+    <episode-cmp class="episode" date="{{notice.pubdate}}" />
+    <view class="like-container">
+      <!-- 点赞 -->
+      <like-cmp
+        class="like"
+        bind:like="onLike"
+        like="{{notice.like_status}}"
+        count="{{notice.fav_nums}}"
+      />
+      <!-- 分享 -->
+      <button-cmp class="share-btn" open-type="share">
+          <image class="share" slot="img" src="/images/icon/share.png" />
+      </button-cmp>
+    </view>
+  </view>
+
+  <essay-cmp hidden="{{classic.type!=300}}" img="{{classic.image}}" content="{{classic.content}}" />
+  <navi-cmp
+    title="{{notice.title}}"
+    first="{{first}}"
+    latest="{{latest}}"
+    class="navi"
+    bind:left="onNext"
+    bind:right="onPrevious"
+  />
 </view>

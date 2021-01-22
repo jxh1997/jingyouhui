@@ -22,9 +22,11 @@ Page({
         if(!item.IndexShow) {
           classics.push(item.notice)
         }
-        this.setData({
-          classics
+        wx.setStorage({
+          key:"notice",
+          data: classics
         })
+        this.setData({ classics })
       })
     })
   },

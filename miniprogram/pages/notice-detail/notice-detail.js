@@ -1,27 +1,34 @@
-// pages/classic-detail/index.js
-Component({
-  /**
-   * 组件的属性列表
-   */
-  properties: {
-    cid: Number,
-    type: Number
-  },
+Page({
 
   /**
-   * 组件的初始数据
+   * 页面的初始数据
    */
   data: {
-
+    notice: [],
+    cid: '',
+    latest: true,
+    first: false,
   },
 
-
   /**
-   * 组件的方法列表
+   * 生命周期函数--监听页面加载
    */
-  methods: {
-    onLoad(options) {
-
-    }
-  }
+  onLoad: function (options) {
+    let cid = options.cid;
+    let that = this;
+    let notice = '';
+    wx.getStorage({
+      key: 'notice',
+      success (res) {
+        notice = res.data
+        notice.forEach((item) => {
+          if(item.id == cid) {
+            that.setData({
+              notice: item
+            })
+          }
+        })
+      }
+    })
+  },
 })
