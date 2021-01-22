@@ -1,8 +1,23 @@
 <!--miniprogram/pages/about/about.wxml-->
 <image class="about-img" src="../../images/my/about@bg.png" mode="scaleToFill" />
-<!-- 打赏按钮 -->
-<view class="about-content" bind:tap="showPopup" >
+
+<view class="content">
+  <!-- 打赏按钮 -->
+  <view class="about-ds">
+    <view class="about-content" bind:tap="onPreviewDS">
+      <image src="../../images/my/ds.png" class="ds-img"></image>
+    </view>
+    <text class="about-font">打赏作者</text>
+  </view>
+  <!-- 联系按钮 -->
+  <view class="about-lx"  bind:tap="onPreviewLX">
+    <view class="about-content">
+      <image src="../../images/my/lx.png" class="ds-img"></image>
+    </view>
+    <text class="about-font">与我联系</text>
+  </view>
 </view>
-<van-popup show="{{ show }}" bind:tap="onClose" custom-style="width: 80%;">
-  <image class="zanshang-img" src="{{url}}" data-src="{{url}}" mode="aspectFill"  bindtap="previewImage"></image>
-</van-popup>
+
+<!-- <van-popup show="{{ show }}" bind:tap="onClose" custom-style="width: 80%;">
+  <image class="zanshang-img" src="{{url}}" data-src="{{url}}" mode="aspectFill" bindtap="previewImage"></image>
+</van-popup> -->

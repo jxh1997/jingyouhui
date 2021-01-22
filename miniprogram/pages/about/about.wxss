@@ -10,16 +10,43 @@ page{
   top: 0;
   left: 0;
 }
-.about-content{
-  /* background-color: red; */
-  width: 200rpx;
-  height: 200rpx;
-  border-radius: 50%;
+
+.content{
+  height: 100%;
   position: absolute;
   z-index: 1;
   left: calc(50% - 100rpx);
-  margin-top: 200rpx;
+  padding-top: calc(50% - 100rpx);
+  box-sizing: border-box;
+  /* margin-top: 200rpx; */
 }
-.zanshang-img {
-  width: 100%;
+.about-content{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  border: 4rpx solid #dbdbdb;
+}
+
+.about-ds {
+  color: #ffffff;
+  font-size: 50rpx;
+}
+.about-font {
+  display: flex;
+  justify-content: center;
+  margin-top: 30rpx;
+}
+.ds-img{
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+.about-lx {
+  color: #ffffff;
+  font-size: 50rpx;
+  position: absolute;
+  z-index: 1;
+  margin-top: 180rpx;
 }

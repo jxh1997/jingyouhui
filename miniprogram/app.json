@@ -2,8 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/personal/personal",
-    "pages/notice-detail/notice-detail",
-    "pages/about/about"
+    "pages/about/about",
+    "pages/notice-detail/notice-detail"
   ],
   "window": {
     "navigationBarTextStyle": "white",
