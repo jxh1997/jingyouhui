@@ -19,14 +19,16 @@ Page({
       let classics = [];
       console.log(notice);
       notice.forEach((item) => {
-        if(!item.IndexShow) {
+        if (!item.IndexShow) {
           classics.push(item.notice)
         }
         wx.setStorage({
-          key:"notice",
+          key: "notice",
           data: classics
         })
-        this.setData({ classics })
+        this.setData({
+          classics
+        })
       })
     })
   },
@@ -44,5 +46,35 @@ Page({
     wx.navigateTo({
       url: `/pages/notice-detail/notice-detail?cid=${cid}&type=${type}`
     })
+  },
+
+  // 订阅消息
+  onSubscribeMessage() {
+    wx.requestSubscribeMessage({
+      tmplIds: ['Sw2wVb1Im3kAaIBqJEQ4XAWf-ABR4pmsgTTlkZyvit8'],
+      success(res) {
+        wx.cloud.callFunction({
+          name: 'SubscribeMessage',
+          data: {},
+          success:res => {
+            console.log(res);
+            // res.result.errCode === 0 为授权发送
+            if(res.result.errCode === 0) {
+              wx.showToast({
+                title: '明天记得领取哦',
+                icon: 'success',
+                duration: 1500
+              })
+            } else {
+              wx.showToast({
+                title: '您拒绝了我，但是一定要回来哦',
+                icon: 'none'
+              })
+            }
+          }
+        })
+      }               
+    })
+
   }
 })

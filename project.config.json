@@ -26,14 +26,14 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-    "enableEngineNative": false,
     "bundle": false,
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
-    "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
+    "enableEngineNative": false,
+    "userConfirmedBundleSwitch": false,
     "minifyWXSS": true
   },
   "appid": "wxb73b4b7f4d52e776",
@@ -41,6 +41,7 @@
   "libVersion": "2.12.2",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {
     "search": {
       "list": []
